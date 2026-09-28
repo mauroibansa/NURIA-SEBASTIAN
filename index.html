@@ -3,123 +3,324 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Nuria Sebastián Estudio desarrolla proyectos de renovación integral, interiorismo y decoración.">
-  <meta name="theme-color" content="#e7e7dd">
-  <title>Nuria Sebastián Estudio</title>
+  <meta name="description" content="Nuria Sebastián Estudio crea espacios con alma: proyectos de renovación integral, interiorismo, decoración y estilismo.">
+  <meta name="theme-color" content="#123f31">
+  <title>Nuria Sebastián Estudio — Espacios con alma</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&amp;family=Lato:wght@300;400&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-  <header class="site-header">
-    <a class="site-name" href="#inicio">Nuria Sebastián Estudio</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#inicio" aria-label="Nuria Sebastián Estudio, inicio">
+      <span class="brand-mark" aria-hidden="true">NS</span>
+      <span class="brand-name"><span>NURIA SEBASTIÁN</span><small>ESTUDIO</small></span>
+    </a>
     <nav class="desktop-nav" aria-label="Navegación principal">
-      <a href="#proyectos">Proyectos</a>
-      <a href="#estudio">Estudio</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#mirada">Concepto</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#casa-estrella">Proyecto</a>
+      <a href="#nuria">Estudio</a>
+      <a class="nav-contact" href="#contacto">Contacto</a>
     </nav>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>Menú</button>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+  <div class="mobile-menu" id="mobile-menu" hidden data-mobile-menu>
     <nav aria-label="Navegación móvil">
-      <a href="#proyectos">Proyectos</a>
-      <a href="#estudio">Estudio</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#mirada">Concepto</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#trayectoria">Trayectoria</a>
+      <a href="#casa-estrella">Proyecto</a>
+      <a href="#nuria">Estudio</a>
       <a href="#contacto">Contacto</a>
     </nav>
   </div>
 
   <main id="contenido">
-    <section class="home" id="inicio" aria-labelledby="home-title">
-      <h1 id="home-title" class="visually-hidden">Nuria Sebastián Estudio</h1>
-      <figure class="home-figure">
-        <!-- Imagen provisional de Unsplash. Sustituir por fotografía real del estudio. -->
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=88" alt="Vista exterior de Casa Estrella">
-        <figcaption>Casa Estrella — [Ciudad], [Año]</figcaption>
-      </figure>
-      <p class="home-summary">Interiorismo y renovación integral. [Ciudad].</p>
+    <section class="hero photo" id="inicio" aria-labelledby="hero-title">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=88" alt="Arquitectura contemporánea integrada en el paisaje">
+      <div class="photo-shade"></div>
+      <div class="hero-copy reveal">
+        <p>Nuria Sebastián Estudio</p>
+        <h1 id="hero-title">Espacios<br>con alma.</h1>
+      </div>
+      <a class="scroll-cue" href="#mirada" aria-label="Descubrir el estudio"><span></span></a>
     </section>
 
-    <section class="projects section-grid" id="proyectos" aria-labelledby="projects-title">
-      <header class="section-heading">
-        <h2 id="projects-title">Proyectos</h2>
-        <p>Selección de trabajos del estudio.</p>
-      </header>
+    <section class="opening dark-section" id="mirada" aria-labelledby="opening-title">
+      <h2 id="opening-title" class="outline-title reveal">El arte de habitar</h2>
+      <div class="opening-copy reveal">
+        <p>Nuria Sebastián Estudio crea, diseña, selecciona y traduce su sensibilidad en espacios con un espíritu único.</p>
+        <p>Lo sutil, artesano, alegre, elegante y sensorial caracteriza una práctica guiada por la emoción.</p>
+      </div>
+      <span class="orbit" aria-hidden="true"></span>
+    </section>
 
-      <div class="project-index" data-project-index>
-        <div class="project-index-head" aria-hidden="true">
-          <span>Nombre</span><span>Ubicación</span><span>Año</span><span>Alcance</span>
+    <section class="house-story light-section" id="casa-estrella" aria-labelledby="house-title">
+      <div class="story-viewport" data-slider>
+        <div class="story-track" data-slider-track>
+          <article class="story-slide photo">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2200&q=88" alt="Entrada luminosa de una casa contemporánea">
+            <div class="photo-shade"></div>
+            <div class="slide-title"><h3>EL UMBRAL</h3><p>Casa Estrella</p></div>
+          </article>
+          <article class="story-slide photo">
+            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=88" alt="Salón sereno abierto a la luz natural">
+            <div class="photo-shade"></div>
+            <div class="slide-title"><h3>LA LUZ</h3><p>Casa Estrella</p></div>
+          </article>
+          <article class="story-slide photo">
+            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2200&q=88" alt="Materiales y objetos elegidos para un interior cálido">
+            <div class="photo-shade"></div>
+            <div class="slide-title"><h3>LA MATERIA</h3><p>Casa Estrella</p></div>
+          </article>
+          <article class="story-slide photo">
+            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2200&q=88" alt="Espacio doméstico conectado con la vegetación">
+            <div class="photo-shade"></div>
+            <div class="slide-title"><h3>EL PAISAJE</h3><p>Casa Estrella</p></div>
+          </article>
         </div>
-        <article class="project-row" data-project-row data-preview="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=82">
-          <h3><a href="casa-estrella.html">Casa Estrella</a></h3>
-          <p><span class="mobile-label">Ubicación</span>[Ciudad]</p>
-          <p><span class="mobile-label">Año</span>[Año]</p>
-          <p><span class="mobile-label">Alcance</span>Interiorismo y renovación integral</p>
-          <!-- Miniatura provisional de Unsplash. Sustituir por fotografía real del proyecto. -->
-          <img class="project-mobile-image" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=82" alt="Interior de Casa Estrella" loading="lazy">
-        </article>
-        <div class="project-preview" data-project-preview aria-hidden="true"><img src="" alt=""></div>
+        <button class="slider-arrow slider-prev" type="button" aria-label="Imagen anterior" data-slider-prev>←</button>
+        <button class="slider-arrow slider-next" type="button" aria-label="Imagen siguiente" data-slider-next>→</button>
+      </div>
+      <div class="story-footer reveal">
+        <p class="eyebrow" id="house-title">Casa Estrella</p>
+        <p>Una casa contada desde sus atmósferas, sus gestos y su manera de recibir la vida.</p>
+        <div class="story-count" aria-live="polite"><span data-slide-current>01</span><i></i><span>04</span></div>
       </div>
     </section>
 
-    <section class="studio" id="estudio" aria-labelledby="studio-title">
-      <div class="studio-grid">
-        <figure class="studio-portrait">
-          <!-- Imagen provisional de Unsplash. Sustituir por retrato real de Nuria Sebastián. -->
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1500&q=86" alt="Retrato provisional de Nuria Sebastián" loading="lazy">
-          <figcaption>Nuria Sebastián, directora del estudio</figcaption>
-        </figure>
-
-        <div class="studio-copy">
-          <h2 id="studio-title">Estudio</h2>
-          <p>Nuria Sebastián Estudio desarrolla proyectos de renovación integral, interiorismo y decoración para viviendas y espacios profesionales. Cada encargo comienza con el análisis del lugar, las necesidades de quienes lo habitan y las condiciones reales del proyecto. El estudio define una propuesta completa de distribución, materiales, iluminación, mobiliario y piezas a medida, y acompaña su ejecución junto a los profesionales implicados. Nuria Sebastián dirige personalmente el proceso y mantiene una relación directa con cada cliente. El trabajo busca resolver el uso cotidiano con precisión y construir espacios duraderos, coherentes con su contexto. La selección de materiales, proveedores y objetos se realiza específicamente para cada proyecto. El estudio trabaja en [Ciudad] y desarrolla encargos nacionales e internacionales. La escala y el alcance se definen en función de las necesidades de cada intervención.</p>
-        </div>
-
-        <div class="services" aria-label="Servicios">
-          <article><h3>Renovación integral</h3><p>Definición y coordinación completa de la intervención, desde la distribución hasta la ejecución.</p></article>
-          <article><h3>Proyecto de interiorismo</h3><p>Diseño del espacio, materiales, iluminación y elementos a medida.</p></article>
-          <article><h3>Decoración y estilismo</h3><p>Selección de mobiliario, textiles, iluminación y objetos para completar el espacio.</p></article>
-        </div>
+    <section class="language dark-section" aria-labelledby="language-title">
+      <div class="center-copy reveal">
+        <h2 id="language-title">Una visión intuitiva<br>de la belleza</h2>
+        <p>La luz, la materia, el color y las piezas elegidas conviven sin estridencias. Cada elemento encuentra su lugar para construir una experiencia que se siente antes de explicarse.</p>
+      </div>
+      <div class="language-strip">
+        <article class="language-card photo"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=82" alt="Luz natural sobre una pared texturada"><span>Luz</span></article>
+        <article class="language-card photo"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=82" alt="Vegetación integrada en un interior"><span>Naturaleza</span></article>
+        <article class="language-card photo"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1000&q=82" alt="Composición de madera, piedra y tejidos"><span>Materia</span></article>
+        <article class="language-card color-card" aria-label="Color"><span>Color</span></article>
+        <article class="language-card photo"><img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?auto=format&fit=crop&w=1000&q=82" alt="Estancia vinculada al paisaje"><span>Lugar</span></article>
+        <article class="language-card photo"><img src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=1000&q=82" alt="Detalle artesanal en un espacio interior"><span>Detalle</span></article>
       </div>
     </section>
 
-    <section class="contact section-grid" id="contacto" aria-labelledby="contact-title">
-      <header class="section-heading contact-heading">
-        <h2 id="contact-title">Contacto</h2>
-        <p>Para consultas de proyecto, envía un mensaje o completa el formulario.</p>
-      </header>
+    <section class="studio-intro light-section" aria-labelledby="studio-title">
+      <p class="eyebrow reveal">Nuria Sebastián Estudio</p>
+      <h2 id="studio-title" class="reveal">Atmósferas para vivir</h2>
+      <p class="reveal">Espacios y objetos creados con arte y con <em>savoir-faire</em>. Una visión sólida e intuitiva de la belleza que convierte cada encargo en una obra personal, sensible y profundamente habitable.</p>
+    </section>
 
-      <address class="contact-details">
-        <p><span>Email</span>[email]</p>
-        <p><span>Teléfono</span>[teléfono]</p>
-        <p><span>Ciudad</span>[Ciudad]</p>
-        <p><span>Instagram</span><a href="#">[Instagram]</a></p>
-      </address>
+    <section class="profile dark-section" id="nuria" aria-labelledby="nuria-title">
+      <div class="profile-photo photo">
+        <img src="https://images.unsplash.com/photo-1598301257982-0cf014dabbcd?auto=format&fit=crop&w=1500&q=86" alt="Retrato editorial en un estudio creativo">
+      </div>
+      <div class="profile-copy reveal">
+        <p class="eyebrow">Fundadora y directora creativa</p>
+        <h2 id="nuria-title">Nuria<br>Sebastián</h2>
+        <blockquote>“Una mirada ecléctica, una mente inquieta. La creatividad que no se detiene y que inevitablemente se expresa.”</blockquote>
+        <a class="text-link" href="#contacto">Conocer su mirada <span>↗</span></a>
+      </div>
+    </section>
 
-      <form class="contact-form" action="#" method="post">
-        <!-- Conectar este formulario al servicio de envío definitivo. -->
-        <label for="nombre">Nombre<input id="nombre" name="nombre" type="text" autocomplete="name" required></label>
-        <label for="email">Email<input id="email" name="email" type="email" autocomplete="email" required></label>
-        <label for="ubicacion">Ubicación del proyecto<input id="ubicacion" name="ubicacion" type="text" required></label>
-        <label for="mensaje">Mensaje<textarea id="mensaje" name="mensaje" rows="6" required></textarea></label>
-        <label class="privacy-check"><input type="checkbox" name="privacidad" required><span>He leído y acepto la política de privacidad.</span></label>
-        <button type="submit">Enviar consulta</button>
-      </form>
+    <section class="global light-section" aria-labelledby="global-title">
+      <div class="global-copy reveal">
+        <h2 id="global-title">Un estudio de mirada global</h2>
+        <p>Las ciudades vividas, los viajes y la confluencia de culturas alimentan un lenguaje propio. Una sensibilidad abierta al mundo, capaz de interpretar cada lugar sin perder su carácter.</p>
+      </div>
+      <div class="global-photo photo"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2400&q=88" alt="Arquitectura contemporánea abierta al exterior"></div>
+    </section>
+
+    <section class="ticker" aria-label="Valores del estudio">
+      <div class="ticker-inner">
+        <p class="ticker-heading">Somos</p>
+        <div class="ticker-window" aria-hidden="true">
+          <div class="ticker-track">
+            <span>Sensibilidad</span>
+            <span>Oficio</span>
+            <span>Intuición</span>
+            <span>Personalidad</span>
+            <span>Cuidado</span>
+            <span>Sensibilidad</span>
+            <span>Oficio</span>
+            <span>Intuición</span>
+            <span>Personalidad</span>
+            <span>Cuidado</span>
+          </div>
+        </div>
+        <p class="visually-hidden">Sensibilidad, oficio, intuición, personalidad y cuidado.</p>
+      </div>
+    </section>
+
+    <section class="services dark-section" id="servicios" aria-labelledby="services-title">
+      <div class="services-heading reveal">
+        <p class="eyebrow">La práctica del estudio</p>
+        <h2 id="services-title">Un acompañamiento<br>a la medida de cada proyecto.</h2>
+      </div>
+      <div class="service-list">
+        <article class="service reveal"><span class="service-number">01</span><div><h3>Renovación integral</h3><p>Transformar</p></div><p class="service-description">Una visión completa del espacio, desde su arquitectura hasta el último gesto.</p><span class="service-arrow">↗</span></article>
+        <article class="service reveal"><span class="service-number">02</span><div><h3>Proyecto de interiorismo</h3><p>Reinterpretar</p></div><p class="service-description">Volúmenes, materiales, luz y ritmo para revelar el carácter de cada lugar.</p><span class="service-arrow">↗</span></article>
+        <article class="service reveal"><span class="service-number">03</span><div><h3>Decoración y estilismo</h3><p>Vestir</p></div><p class="service-description">Mobiliario, objetos y detalles que completan una atmósfera y la hacen propia.</p><span class="service-arrow">↗</span></article>
+      </div>
+    </section>
+
+    <section class="cities light-section" id="trayectoria" aria-labelledby="cities-title">
+      <p class="eyebrow reveal">Una trayectoria en movimiento</p>
+      <h2 id="cities-title" class="reveal">Madrid&nbsp;&nbsp; | &nbsp;&nbsp;París&nbsp;&nbsp; | &nbsp;&nbsp;Londres&nbsp;&nbsp; | &nbsp;&nbsp;Milán&nbsp;&nbsp; | &nbsp;&nbsp;Nueva York</h2>
+    </section>
+
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="contact-hero photo">
+        <img src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=2400&q=88" alt="Interior sereno al atardecer">
+        <div class="photo-shade"></div>
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Cuestionario de proyecto</p>
+          <h2 id="contact-title">Todo espacio empieza<br>con una historia.</h2>
+          <p>Cuéntanos la tuya.</p>
+        </div>
+      </div>
+
+      <div class="project-enquiry dark-section">
+        <header class="form-intro reveal">
+          <p class="eyebrow">06 — Contacto</p>
+          <h3>Empecemos por<br>conocerte.</h3>
+          <p>Este primer diálogo nos ayuda a comprender el lugar, el momento y la intención que darán forma al proyecto.</p>
+          <span class="form-orbit" aria-hidden="true"></span>
+        </header>
+
+        <form class="project-form" data-project-form>
+          <fieldset>
+            <legend><span>01</span> Sobre ti</legend>
+            <div class="form-grid">
+              <label for="nombre">Nombre y apellidos</label>
+              <input id="nombre" type="text" name="nombre" autocomplete="name" required>
+
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" autocomplete="email" required>
+
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" type="tel" name="telefono" autocomplete="tel">
+
+              <label for="ciudad">Ciudad / País</label>
+              <input id="ciudad" type="text" name="ciudad" autocomplete="address-level2" required>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>02</span> El proyecto</legend>
+            <div class="form-grid">
+              <div class="choice-field full-width">
+                <p>¿Qué tienes entre manos?</p>
+                <div class="choice-grid">
+                  <label class="choice-option"><input type="radio" name="servicio" value="Renovación integral" required><span><small>01</small>Renovación integral</span></label>
+                  <label class="choice-option"><input type="radio" name="servicio" value="Proyecto de interiorismo"><span><small>02</small>Proyecto de interiorismo</span></label>
+                  <label class="choice-option"><input type="radio" name="servicio" value="Decoración y estilismo"><span><small>03</small>Decoración y estilismo</span></label>
+                  <label class="choice-option"><input type="radio" name="servicio" value="Aún no lo sé"><span><small>04</small>Aún no lo sé</span></label>
+                </div>
+              </div>
+
+              <label for="espacio">Tipo de espacio</label>
+              <select id="espacio" name="espacio" required>
+                <option value="">Selecciona una opción</option>
+                <option>Vivienda habitual</option>
+                <option>Segunda residencia</option>
+                <option>Espacio profesional</option>
+                <option>Hospitality</option>
+                <option>Otro</option>
+              </select>
+
+              <label for="ubicacion">Ubicación del proyecto</label>
+              <input id="ubicacion" type="text" name="ubicacion" required>
+
+              <label for="superficie">Superficie aproximada</label>
+              <input id="superficie" type="text" name="superficie" placeholder="m²">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>03</span> El momento</legend>
+            <div class="form-grid">
+              <label for="estado">¿En qué punto se encuentra?</label>
+              <select id="estado" name="estado" required>
+                <option value="">Selecciona una opción</option>
+                <option>Buscando el espacio</option>
+                <option>Recién adquirido</option>
+                <option>Con proyecto previo</option>
+                <option>En obra</option>
+                <option>Listo para vestir</option>
+              </select>
+
+              <label for="inicio">¿Cuándo te gustaría comenzar?</label>
+              <select id="inicio" name="inicio" required>
+                <option value="">Selecciona una opción</option>
+                <option>Lo antes posible</option>
+                <option>En los próximos 3 meses</option>
+                <option>Entre 3 y 6 meses</option>
+                <option>Más adelante</option>
+              </select>
+
+              <label for="inversion">Inversión estimada</label>
+              <select id="inversion" name="inversion">
+                <option value="">Prefiero comentarlo personalmente</option>
+                <option>Hasta 100.000 €</option>
+                <option>Entre 100.000 € y 250.000 €</option>
+                <option>Entre 250.000 € y 500.000 €</option>
+                <option>Más de 500.000 €</option>
+              </select>
+
+              <label for="descubrimiento">¿Cómo nos has conocido?</label>
+              <input id="descubrimiento" type="text" name="descubrimiento">
+            </div>
+          </fieldset>
+
+          <fieldset class="project-story">
+            <legend><span>04</span> Tu historia</legend>
+            <label for="mensaje">Háblanos del espacio que imaginas</label>
+            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Qué te gustaría transformar, cómo quieres vivirlo y cualquier detalle que nos ayude a comprenderlo." required></textarea>
+          </fieldset>
+
+          <div class="form-actions">
+            <label class="consent"><input type="checkbox" name="privacidad" required><span>He leído y acepto la política de privacidad.</span></label>
+            <button type="submit">Enviar el proyecto <span>↗</span></button>
+            <p class="form-note" aria-live="polite">Formulario de demostración. La conexión de envío se activará cuando se defina el correo de destino.</p>
+          </div>
+        </form>
+      </div>
+
+      <footer class="site-footer">
+        <div class="footer-main">
+          <div class="footer-contact-block">
+            <h2>Contacto</h2>
+            <p>Nuria Sebastián Estudio</p>
+            <a href="#contacto">Formulario de proyecto</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+          </div>
+          <a class="footer-signature" href="#inicio" aria-label="Nuria Sebastián Estudio, volver al inicio">
+            <span class="footer-emblem" aria-hidden="true">N</span>
+            <span class="footer-wordmark" aria-hidden="true">
+              <span>NURI</span><span>A</span><span>SEBA</span><span>STIÁ</span><span>N</span>
+            </span>
+          </a>
+        </div>
+        <div class="footer-meta">
+          <span>© <span data-year></span> Nuria Sebastián Estudio</span>
+          <span>Español · English</span>
+        </div>
+      </footer>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <span>Nuria Sebastián Estudio</span>
-    <span>© <span data-year></span></span>
-    <a href="#">Instagram</a>
-    <a href="#">Aviso legal</a>
-    <a href="#">Privacidad</a>
-  </footer>
-
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>
