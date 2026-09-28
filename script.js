@@ -2,6 +2,13 @@ const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('[data-menu-toggle]');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
 
+function updateHeader() {
+  header?.classList.toggle('is-scrolled', window.scrollY > 36);
+}
+
+updateHeader();
+window.addEventListener('scroll', updateHeader, { passive: true });
+
 menuButton?.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isOpen));
