@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#050505"/>
-  <text x="32" y="39" fill="#f1f0eb" font-family="Arial, sans-serif" font-size="25" text-anchor="middle">NS</text>
+  <rect width="64" height="64" fill="#123f31"/>
+  <text x="32" y="39" fill="#e7e7dd" font-family="Arial, sans-serif" font-size="25" text-anchor="middle">NS</text>
 </svg>
