@@ -9,6 +9,7 @@
 }
 
 * { box-sizing: border-box; }
+.visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--black); color: var(--white); font-family: "DM Sans", Arial, sans-serif; font-weight: 300; }
 body.menu-open { overflow: hidden; }
@@ -102,12 +103,19 @@ button { color: inherit; }
 .global-copy p { margin: 0 0 8px; font-size: clamp(18px, 1.72vw, 22px); line-height: 1.5; font-weight: 400; }
 .global-photo { height: 660px; }
 
-.ticker { overflow: hidden; padding: 56px 0; background: var(--black); }
-.ticker-track { display: flex; align-items: center; gap: 30px; width: max-content; padding-left: var(--page-pad); white-space: nowrap; animation: ticker 30s linear infinite; }
-.ticker span { margin-right: 8px; font-size: 14px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
-.ticker strong { font-size: clamp(35px, 6vw, 83px); font-weight: 300; letter-spacing: -.04em; }
-.ticker i { color: var(--accent); font-size: 24px; font-style: normal; }
-@keyframes ticker { to { transform: translateX(-50%); } }
+.ticker { min-height: 720px; overflow: hidden; display: grid; place-items: center; padding: 90px var(--page-pad); background: var(--black); }
+.ticker-inner { display: grid; grid-template-columns: auto minmax(300px, 560px); gap: clamp(48px, 7vw, 110px); align-items: center; }
+.ticker-heading { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(42px, 4.2vw, 60px); line-height: 1; font-weight: 400; letter-spacing: -.045em; }
+.ticker-window { height: 440px; overflow: hidden; -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.12) 9%, #000 35%, #000 65%, rgba(0,0,0,.12) 91%, transparent 100%); mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.12) 9%, #000 35%, #000 65%, rgba(0,0,0,.12) 91%, transparent 100%); }
+.ticker-track { display: flex; flex-direction: column; animation: ticker-vertical 16s linear infinite; will-change: transform; }
+.ticker-track span { height: 88px; display: flex; align-items: center; color: var(--white); font-family: "DM Sans", Arial, sans-serif; font-size: clamp(42px, 4.25vw, 61px); line-height: 1; font-weight: 300; letter-spacing: -.035em; white-space: nowrap; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+@keyframes ticker-vertical { to { transform: translateY(-440px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ticker-track { animation-duration: 80s; }
+}
 
 .services { padding: 125px var(--page-pad) 80px; }
 .services-heading { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; margin-bottom: 92px; }
@@ -213,7 +221,12 @@ button { color: inherit; }
   .global { padding: 84px 22px 0; }
   .global-copy { grid-template-columns: 1fr; gap: 36px; margin-bottom: 54px; }
   .global-photo { height: 470px; }
-  .ticker { padding: 43px 0; }
+  .ticker { min-height: 570px; padding: 68px 22px; }
+  .ticker-inner { grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 8vw, 48px); width: 100%; }
+  .ticker-heading { font-size: clamp(31px, 9vw, 44px); }
+  .ticker-window { height: 350px; }
+  .ticker-track span { height: 70px; font-size: clamp(30px, 8.8vw, 44px); }
+  @keyframes ticker-vertical { to { transform: translateY(-350px); } }
   .services { padding: 84px 22px 60px; }
   .services-heading { grid-template-columns: 1fr; gap: 25px; margin-bottom: 58px; }
   .service { grid-template-columns: 34px 1fr 28px; gap: 12px; padding: 28px 0; }
