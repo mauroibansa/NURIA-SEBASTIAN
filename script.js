@@ -63,6 +63,39 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
+const tickerWindow = document.querySelector('.ticker-window');
+const tickerWords = [...document.querySelectorAll('.ticker-track span')];
+let tickerFrame;
+
+function updateTickerFocus() {
+  if (!tickerWindow || !tickerWords.length) return;
+
+  const windowRect = tickerWindow.getBoundingClientRect();
+  const axis = windowRect.top + windowRect.height / 2;
+  let closestWord;
+  let closestDistance = Number.POSITIVE_INFINITY;
+
+  tickerWords.forEach((word) => {
+    const rect = word.getBoundingClientRect();
+    const distance = Math.abs(rect.top + rect.height / 2 - axis);
+    if (distance < closestDistance) {
+      closestDistance = distance;
+      closestWord = word;
+    }
+  });
+
+  tickerWords.forEach((word) => word.classList.toggle('is-active', word === closestWord));
+  tickerFrame = requestAnimationFrame(updateTickerFocus);
+}
+
+if (tickerWindow) {
+  const tickerObserver = new IntersectionObserver(([entry]) => {
+    cancelAnimationFrame(tickerFrame);
+    if (entry.isIntersecting) updateTickerFocus();
+  });
+  tickerObserver.observe(tickerWindow);
+}
+
 document.querySelector('[data-project-form]')?.addEventListener('submit', (event) => {
   event.preventDefault();
   const note = event.currentTarget.querySelector('.form-note');
