@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -170,11 +170,12 @@
         </div>
       </div>
 
-      <div class="project-enquiry light-section">
+      <div class="project-enquiry dark-section">
         <header class="form-intro reveal">
           <p class="eyebrow">06 — Contacto</p>
           <h3>Empecemos por<br>conocerte.</h3>
           <p>Este primer diálogo nos ayuda a comprender el lugar, el momento y la intención que darán forma al proyecto.</p>
+          <span class="form-orbit" aria-hidden="true"></span>
         </header>
 
         <form class="project-form" data-project-form>
@@ -198,14 +199,15 @@
           <fieldset>
             <legend><span>02</span> El proyecto</legend>
             <div class="form-grid">
-              <label for="servicio">¿Qué tienes entre manos?</label>
-              <select id="servicio" name="servicio" required>
-                <option value="">Selecciona una opción</option>
-                <option>Renovación integral</option>
-                <option>Proyecto de interiorismo</option>
-                <option>Decoración y estilismo</option>
-                <option>Aún no lo sé</option>
-              </select>
+              <div class="choice-field full-width">
+                <p>¿Qué tienes entre manos?</p>
+                <div class="choice-grid">
+                  <label class="choice-option"><input type="radio" name="servicio" value="Renovación integral" required><span><small>01</small>Renovación integral</span></label>
+                  <label class="choice-option"><input type="radio" name="servicio" value="Proyecto de interiorismo"><span><small>02</small>Proyecto de interiorismo</span></label>
+                  <label class="choice-option"><input type="radio" name="servicio" value="Decoración y estilismo"><span><small>03</small>Decoración y estilismo</span></label>
+                  <label class="choice-option"><input type="radio" name="servicio" value="Aún no lo sé"><span><small>04</small>Aún no lo sé</span></label>
+                </div>
+              </div>
 
               <label for="espacio">Tipo de espacio</label>
               <select id="espacio" name="espacio" required>
@@ -279,6 +281,6 @@
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
