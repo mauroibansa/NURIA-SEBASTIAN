@@ -56,17 +56,10 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
 
-const dialog = document.querySelector('[data-dialog]');
-document.querySelector('[data-dialog-open]')?.addEventListener('click', () => dialog?.showModal());
-document.querySelector('[data-dialog-close]')?.addEventListener('click', () => dialog?.close());
-dialog?.addEventListener('click', (event) => {
-  if (event.target === dialog) dialog.close();
-});
-
 document.querySelector('[data-project-form]')?.addEventListener('submit', (event) => {
   event.preventDefault();
   const note = event.currentTarget.querySelector('.form-note');
-  note.textContent = 'Gracias. En la versión final, este formulario enviará la solicitud directamente al estudio.';
+  note.textContent = 'Gracias por compartir tu proyecto. En la versión final, esta información se enviará directamente al estudio.';
 });
 
 document.querySelector('[data-year]').textContent = new Date().getFullYear();

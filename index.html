@@ -159,31 +159,125 @@
       <h2 id="cities-title" class="reveal">Madrid&nbsp;&nbsp; | &nbsp;&nbsp;París&nbsp;&nbsp; | &nbsp;&nbsp;Londres&nbsp;&nbsp; | &nbsp;&nbsp;Milán&nbsp;&nbsp; | &nbsp;&nbsp;Nueva York</h2>
     </section>
 
-    <section class="contact photo" id="contacto" aria-labelledby="contact-title">
-      <img src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=2400&q=88" alt="Interior sereno al atardecer">
-      <div class="photo-shade"></div>
-      <div class="contact-copy reveal">
-        <p class="eyebrow">Hablemos</p>
-        <h2 id="contact-title">Todo espacio empieza<br>con una historia.</h2>
-        <button class="text-link contact-trigger" type="button" data-dialog-open>Cuéntanos la tuya <span>↗</span></button>
+    <section class="contact" id="contacto" aria-labelledby="contact-title">
+      <div class="contact-hero photo">
+        <img src="https://images.unsplash.com/photo-1600210491369-e753d80a41f3?auto=format&fit=crop&w=2400&q=88" alt="Interior sereno al atardecer">
+        <div class="photo-shade"></div>
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Cuestionario de proyecto</p>
+          <h2 id="contact-title">Todo espacio empieza<br>con una historia.</h2>
+          <p>Cuéntanos la tuya.</p>
+        </div>
       </div>
-      <footer><span>© <span data-year></span> Nuria Sebastián Estudio</span><a href="#">Instagram</a><span>Español · English</span></footer>
+
+      <div class="project-enquiry light-section">
+        <header class="form-intro reveal">
+          <p class="eyebrow">06 — Contacto</p>
+          <h3>Empecemos por<br>conocerte.</h3>
+          <p>Este primer diálogo nos ayuda a comprender el lugar, el momento y la intención que darán forma al proyecto.</p>
+        </header>
+
+        <form class="project-form" data-project-form>
+          <fieldset>
+            <legend><span>01</span> Sobre ti</legend>
+            <div class="form-grid">
+              <label for="nombre">Nombre y apellidos</label>
+              <input id="nombre" type="text" name="nombre" autocomplete="name" required>
+
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" autocomplete="email" required>
+
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" type="tel" name="telefono" autocomplete="tel">
+
+              <label for="ciudad">Ciudad / País</label>
+              <input id="ciudad" type="text" name="ciudad" autocomplete="address-level2" required>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>02</span> El proyecto</legend>
+            <div class="form-grid">
+              <label for="servicio">¿Qué tienes entre manos?</label>
+              <select id="servicio" name="servicio" required>
+                <option value="">Selecciona una opción</option>
+                <option>Renovación integral</option>
+                <option>Proyecto de interiorismo</option>
+                <option>Decoración y estilismo</option>
+                <option>Aún no lo sé</option>
+              </select>
+
+              <label for="espacio">Tipo de espacio</label>
+              <select id="espacio" name="espacio" required>
+                <option value="">Selecciona una opción</option>
+                <option>Vivienda habitual</option>
+                <option>Segunda residencia</option>
+                <option>Espacio profesional</option>
+                <option>Hospitality</option>
+                <option>Otro</option>
+              </select>
+
+              <label for="ubicacion">Ubicación del proyecto</label>
+              <input id="ubicacion" type="text" name="ubicacion" required>
+
+              <label for="superficie">Superficie aproximada</label>
+              <input id="superficie" type="text" name="superficie" placeholder="m²">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend><span>03</span> El momento</legend>
+            <div class="form-grid">
+              <label for="estado">¿En qué punto se encuentra?</label>
+              <select id="estado" name="estado" required>
+                <option value="">Selecciona una opción</option>
+                <option>Buscando el espacio</option>
+                <option>Recién adquirido</option>
+                <option>Con proyecto previo</option>
+                <option>En obra</option>
+                <option>Listo para vestir</option>
+              </select>
+
+              <label for="inicio">¿Cuándo te gustaría comenzar?</label>
+              <select id="inicio" name="inicio" required>
+                <option value="">Selecciona una opción</option>
+                <option>Lo antes posible</option>
+                <option>En los próximos 3 meses</option>
+                <option>Entre 3 y 6 meses</option>
+                <option>Más adelante</option>
+              </select>
+
+              <label for="inversion">Inversión estimada</label>
+              <select id="inversion" name="inversion">
+                <option value="">Prefiero comentarlo personalmente</option>
+                <option>Hasta 100.000 €</option>
+                <option>Entre 100.000 € y 250.000 €</option>
+                <option>Entre 250.000 € y 500.000 €</option>
+                <option>Más de 500.000 €</option>
+              </select>
+
+              <label for="descubrimiento">¿Cómo nos has conocido?</label>
+              <input id="descubrimiento" type="text" name="descubrimiento">
+            </div>
+          </fieldset>
+
+          <fieldset class="project-story">
+            <legend><span>04</span> Tu historia</legend>
+            <label for="mensaje">Háblanos del espacio que imaginas</label>
+            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Qué te gustaría transformar, cómo quieres vivirlo y cualquier detalle que nos ayude a comprenderlo." required></textarea>
+          </fieldset>
+
+          <div class="form-actions">
+            <label class="consent"><input type="checkbox" name="privacidad" required><span>He leído y acepto la política de privacidad.</span></label>
+            <button type="submit">Enviar el proyecto <span>↗</span></button>
+            <p class="form-note" aria-live="polite">Formulario de demostración. La conexión de envío se activará cuando se defina el correo de destino.</p>
+          </div>
+        </form>
+      </div>
+
+      <footer class="site-footer"><span>© <span data-year></span> Nuria Sebastián Estudio</span><a href="#">Instagram</a><span>Español · English</span></footer>
     </section>
   </main>
-
-  <dialog class="project-dialog" data-dialog>
-    <button class="dialog-close" type="button" aria-label="Cerrar" data-dialog-close>×</button>
-    <p class="eyebrow">Cuéntanos tu historia</p>
-    <h2>Empecemos por conocerte.</h2>
-    <form data-project-form>
-      <label>Nombre<input type="text" name="nombre" autocomplete="name" required></label>
-      <label>Email<input type="email" name="email" autocomplete="email" required></label>
-      <label>¿Qué tienes entre manos?<select name="servicio" required><option value="">Selecciona una opción</option><option>Renovación integral</option><option>Proyecto de interiorismo</option><option>Decoración y estilismo</option><option>Aún no lo sé</option></select></label>
-      <label>Háblanos de tu proyecto<textarea name="mensaje" rows="4" required></textarea></label>
-      <button type="submit">Enviar solicitud ↗</button>
-      <p class="form-note">Formulario de demostración. La conexión de envío se activará cuando se defina el correo de destino.</p>
-    </form>
-  </dialog>
 
   <script src="script.js"></script>
 </body>
