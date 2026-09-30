@@ -139,7 +139,7 @@ figcaption span { display: block; color: var(--ink); font-weight: 400; }
 .global-photo { width: calc(100% - var(--page-pad)); margin-left: var(--page-pad); }
 .global-photo img { height: min(58vw, 760px); object-fit: cover; }
 
-.values { position: relative; height: 430vh; min-height: 2400px; overflow: clip; background: rgba(18, 63, 49, .94); }
+.values { position: relative; height: 215vh; min-height: 1200px; overflow: clip; background: rgba(18, 63, 49, .94); }
 .values-texture { position: absolute; inset: -6% -3%; background: url("assets/cotton-paper-texture.jpg") center / cover repeat; opacity: .42; mix-blend-mode: soft-light; filter: saturate(.72) contrast(1.08); will-change: transform; }
 .values-stage { position: sticky; top: 0; z-index: 1; height: 100svh; min-height: 640px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--s3); align-items: center; padding-inline: var(--page-pad); overflow: hidden; }
 .values-heading { grid-column: 2 / 5; justify-self: end; margin: 0; font-family: var(--font-display); font-size: clamp(48px, 5vw, 72px); line-height: 1; }
@@ -264,7 +264,7 @@ figcaption span { display: block; color: var(--ink); font-weight: 400; }
   .global-copy { margin-bottom: var(--s5); }
   .global-photo { width: 100%; margin-left: 0; }
   .global-photo img { height: 58vh; }
-  .values { height: 390vh; min-height: 2100px; }
+  .values { height: 195vh; min-height: 1050px; }
   .values-stage { grid-template-columns: repeat(6, minmax(0, 1fr)); column-gap: var(--s2); padding-inline: var(--page-pad); }
   .values-heading { grid-column: 1 / 3; justify-self: start; font-size: clamp(36px, 10vw, 48px); }
   .values-window { grid-column: 3 / 7; }
