@@ -140,7 +140,7 @@ figcaption span { display: block; color: var(--ink); font-weight: 400; }
 .global-photo img { height: min(58vw, 760px); object-fit: cover; }
 
 .values { position: relative; height: 430vh; min-height: 2400px; overflow: clip; background: rgba(18, 63, 49, .94); }
-.values-texture { position: absolute; inset: -6% -3%; background: url("assets/cotton-paper-texture.jpg") center / cover repeat; opacity: .17; mix-blend-mode: soft-light; will-change: transform; }
+.values-texture { position: absolute; inset: -6% -3%; background: url("assets/cotton-paper-texture.jpg") center / cover repeat; opacity: .42; mix-blend-mode: soft-light; filter: saturate(.72) contrast(1.08); will-change: transform; }
 .values-stage { position: sticky; top: 0; z-index: 1; height: 100svh; min-height: 640px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--s3); align-items: center; padding-inline: var(--page-pad); overflow: hidden; }
 .values-heading { grid-column: 2 / 5; justify-self: end; margin: 0; font-family: var(--font-display); font-size: clamp(48px, 5vw, 72px); line-height: 1; }
 .values-window { position: relative; grid-column: 6 / 12; align-self: stretch; overflow: hidden; }
